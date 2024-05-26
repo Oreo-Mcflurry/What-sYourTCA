@@ -11,7 +11,9 @@ import SwiftUI
 struct What_sYourTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			  ContentView(store: .init(initialState: CounterFeature.State(), reducer: {
+				  CounterFeature()
+			  }))
         }
     }
 }
